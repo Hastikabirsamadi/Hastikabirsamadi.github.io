@@ -3224,8 +3224,11 @@ input, select, textarea {
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
+		overflow-y: auto;  /* Enables vertical scrolling */
+  		overflow-x: hidden;  /* Hides horizontal scroll */
 		cursor: default;
 		text-align: center;
+		white-space: nowrap;  /* Prevent line breaks */
 	}
 
 		#nav input, #nav select, #nav textarea {
@@ -3265,6 +3268,8 @@ input, select, textarea {
 			margin: 0;
 			padding: 0;
 			list-style: none;
+			display: flex;  /* Use flexbox to align items horizontally */
+    		flex-wrap: nowrap;  /* Ensure items stay in a single row */
 		}
 
 			#nav ul li {
