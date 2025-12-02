@@ -3225,7 +3225,7 @@ input, select, textarea {
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		overflow-y: auto;  /* Enables vertical scrolling */
-  		overflow-x: hidden;  /* Hides horizontal scroll */
+  		overflow-x: auto;  /* Hides horizontal scroll */
 		cursor: default;
 		text-align: center;
 		white-space: nowrap;  /* Prevent line breaks */
