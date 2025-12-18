@@ -2183,7 +2183,7 @@ input, select, textarea {
 	input[type="radio"]:checked + label:before {
 		background-color: #ffffff;
 		border-color: #ffffff;
-		color: #d19b9b;
+		color: #935d8c;
 	}
 
 	input[type="checkbox"]:focus + label:before,
