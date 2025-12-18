@@ -3270,12 +3270,9 @@ input, select, textarea {
 			list-style: none;
 			display: flex;  /* Use flexbox to align items horizontally */
     		flex-wrap: nowrap;  /* Ensure items stay in a single row */
-		}
-
-			#nav ul li {
-				-moz-transition: margin 0.2s ease;
-				-webkit-transition: margin 0.2s ease;
-				-ms-transition: margin 0.2s ease;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
 				transition: margin 0.2s ease;
 				display: inline-block;
 				margin: 0 0.35em;

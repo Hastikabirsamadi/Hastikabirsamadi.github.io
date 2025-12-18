@@ -32,10 +32,10 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
-
-			li {
-				@include vendor('transition', (
-					'margin #{_duration(transition)} ease'
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
 				));
 				display: inline-block;
 				margin: 0 0.35em;
