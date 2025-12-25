@@ -100,9 +100,6 @@ input, select, textarea {
 
 	body {
 		background-color: #d19b9b;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #d19b9b 15%, #d19b9b 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #d19b9b 15%, #d19b9b 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #d19b9b 15%, #d19b9b 85%);
 		background-image: url("images/overlay.png"), linear-gradient(45deg, #d19b9b 15%, #d19b9b 85%);
 	}
 
@@ -3213,8 +3210,6 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #ffffff;
-		color: #636363;
 		position: absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
@@ -3222,11 +3217,11 @@ input, select, textarea {
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
-		overflow-y: auto;  /* Enables vertical scrolling */
-  		overflow-x: auto;  /* Hides horizontal scroll */
 		cursor: default;
 		text-align: center;
-		white-space: nowrap;  /* Prevent line breaks */
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
 	}
 
 		#nav input, #nav select, #nav textarea {
@@ -3266,19 +3261,27 @@ input, select, textarea {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-		display: flex;
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			gap: 0.35em;
+			overflow-x: auto;
+			overflow-y: hidden;
+			-webkit-overflow-scrolling: touch;
+			white-space: nowrap;
+		}
 
 		#nav ul li {
 			-moz-transition: margin 0.2s ease;
 			-webkit-transition: margin 0.2s ease;
 			-ms-transition: margin 0.2s ease;
-				vertical-align: middle;
-			}
+			transition: margin 0.2s ease;
+			display: inline-block;
+			margin: 0 0.35em;
+			padding: 0;
+			vertical-align: middle;
+		}
 
 				#nav ul li a {
 					-moz-transition: font-size 0.2s ease;
@@ -3339,6 +3342,7 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.08);
 	}
 
 		#main input, #main select, #main textarea {
@@ -3768,6 +3772,7 @@ input, select, textarea {
 		width: 64em;
 		max-width: calc(100% - 4em);
 		margin: 0 auto;
+		position: relative;
 	}
 
 		@media screen and (max-width: 480px) {
