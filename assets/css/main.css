@@ -2640,6 +2640,11 @@ input, select, textarea {
 		margin-bottom: 3em;
 	}
 
+	/* Reduce gap for specific sections (research experience) to match others */
+	#fourth header.major {
+	    margin-bottom: 1.25em;
+	}
+
 		header.major h2 {
 			font-size: 2em;
 		}
@@ -3377,6 +3382,23 @@ input, select, textarea {
 		}
 
 		#main input[type="submit"],
+
+	/* Degree date style */
+	.degree-date {
+	    font-size: 0.95em;
+		color: #636363;
+		font-weight: 700;
+	}
+	.degree-row h3 {
+	    font-weight: 600;
+	}
+
+	/* Section date (top-right labels) */
+	.section-date {
+		font-size: 0.95em;
+		color: #636363;
+		font-weight: 700;
+	}
 		#main input[type="reset"],
 		#main input[type="button"],
 		#main button,
