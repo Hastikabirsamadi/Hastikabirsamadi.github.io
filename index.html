@@ -1,173 +1,466 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasti KabirSamadi — Computational Biology</title>
+  <meta name="description" content="Hasti KabirSamadi — Computer Engineering senior at AUT, specialising in computational biology, RNA language models, and machine learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- ─── NAV ─────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#hero" aria-label="Home">
+        <span class="nav-brand-icon" aria-hidden="true"><i class="fas fa-dna"></i></span>
+        HK
+        <span class="nav-brand-seq" aria-hidden="true">AUGC</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#research"  class="nav-link">Research</a></li>
+        <li><a href="#projects"  class="nav-link">Projects</a></li>
+        <li><a href="#interests" class="nav-link">Interests</a></li>
+        <li><a href="#skills"    class="nav-link">Skills</a></li>
+        <li><a href="#teaching"  class="nav-link">Teaching</a></li>
+        <li><a href="hasti-cv.pdf" class="nav-link nav-cv" target="_blank" rel="noopener">CV ↗</a></li>
+      </ul>
+    </div>
+  </nav>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Hasti Kabirsamadi</h1>
-						<!-- <p>Just another free, fully responsive site template<br /> -->
-						<p>Tehran, Iran &emsp; <a href="mailto:hastikabirsamadi@aut.ac.ir">hastikabirsamadi@aut.ac.ir</a> &emsp; <a href="tel:+989354116985">+98 935 411 6985</a></p>
-						&emsp; <a href="https://github.com/Hastikabirsamadi">github.com/Hastikabirsamadi</a> &emsp; <a href="https://aut.ac.ir/">Amirkabir University</a></p>
-					</header>
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <header id="hero" role="banner">
+    <div class="hero-seq-bg" aria-hidden="true"></div>
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Computational Biology &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; RNA Language Models</p>
+        <h1 class="hero-name">Hasti<br />KabirSamadi</h1>
+        <p class="hero-affil">Amirkabir University of Technology &nbsp;·&nbsp; Tehran, Iran</p>
+        <div class="hero-contact">
+          <a href="mailto:hastikabirsamadi@aut.ac.ir" class="hero-contact-link">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            hastikabirsamadi@aut.ac.ir
+          </a>
+          <a href="https://github.com/Hastikabirsamadi" class="hero-contact-link" target="_blank" rel="noopener">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            github.com/Hastikabirsamadi
+          </a>
+        </div>
+        <div class="hero-actions">
+          <a href="#research" class="btn-primary">View Research</a>
+          <a href="hasti-cv.pdf" class="btn-ghost" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap" aria-hidden="true">
+        <img src="images/hasti.jpg" alt="Hasti KabirSamadi" class="hero-photo" width="320" height="320" />
+      </div>
+    </div>
+    <a class="hero-scroll" href="#about" aria-label="Scroll to About">
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </a>
+  </header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-						<li><a href="#intro" class="active">About Me</a></li>
-							<li><a href="#first">Education</a></li>
-							<li><a href="#second">Research Interests</a></li>
-							<li><a href="#fourth">Research Experience</a></li>
-							<li><a href="#fifth">Teaching Experience</a></li>
-							<li><a href="#sixth">Related Courses and Workshops</a></li>
-							<li><a href="#seventh">Academic Projects</a></li>
-							<li><a href="#cta">Skills & Languages</a></li>
-						</ul>
-					</nav>
+  <main>
 
-				<!-- Main -->
-					<div id="main">
+    <!-- ─── ABOUT ────────────────────────────────────────────── -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title">About</h2>
+        <div class="about-grid">
+          <p class="about-text">
+            Computer Engineering senior at Amirkabir University of Technology (Tehran Polytechnic),
+            specialising in computational biology and machine learning. I have hands-on research experience
+            with single-cell RNA-seq analysis, transfer-learning frameworks for atlas mapping (scArches),
+            RNA language model evaluation, and transformer-based sequence models.
+          </p>
+          <p class="about-text">
+            I am proficient in the Python deep-learning stack (PyTorch, Scikit-learn, Pandas, NumPy)
+            and am actively deepening my expertise in RNA-seq pipelines and statistical genomics.
+            I am seeking a research internship in computational biology, bioinformatics,
+            or ML-driven biomedical research where I can contribute to ongoing projects and grow as a researcher.
+          </p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-stat-val">18.5<span class="about-stat-denom">/20</span></span>
+              <span class="about-stat-label">GPA (last 3 semesters)</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-val">71<span class="about-stat-denom">st</span></span>
+              <span class="about-stat-label">nationwide entrance rank<br><small>145,000+ participants</small></span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-val">6<span class="about-stat-denom">×</span></span>
+              <span class="about-stat-label">TA appointments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2><strong>About Me</strong></h2>
-										</header>
-										<p>Computer Engineering undergraduate at Amirkabir University of Technology with a strong focus on bioinformatics and machine learning. Experienced in computational analysis of biological data, including sequence analysis, with hands-on experience in Python and deep-learning frameworks. Highly motivated to pursue research-oriented opportunities at the intersection of AI and life sciences.</p>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+    <!-- ─── RESEARCH EXPERIENCE ───────────────────────────────── -->
+    <section id="research" class="section section--alt" aria-labelledby="research-title">
+      <div class="container">
+        <h2 class="section-title" id="research-title">Research Experience</h2>
+        <div class="timeline" role="list">
 
-						<!-- First Section -->
-						<section id="first" class="main">
-							<header class="major">
-								<h2><strong>Education</strong></h2>
-							</header>
-							<div class="content" style="text-align: left;">
-								<div class="degree-row" style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;">
-									<h3 style="margin:0;">B.Sc. in Computer Engineering</h3>
-									<span class="degree-date">2022 - present</span>
-								</div>
-								<p style="margin-top:0.5rem;"><strong>Amirkabir University of Technology (Tehran Polytechnic)</strong> | Iran<br />
-								GPA (last two semesters): 18.5 / 20</p>
-							</div>
-						</section>
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026 – present</span>
+            </div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Research Assistant</h3>
+              <p class="timeline-org">Amirkabir University of Technology</p>
+              <p class="timeline-sup">Supervisor: Prof. Fatemeh Zare-Mirakabad &nbsp;·&nbsp; Dept. of Mathematics &amp; Computer Science</p>
+              <ul class="timeline-bullets">
+                <li>Evaluating RNA language models (RiNALMo, RNA-FM) across structural, functional, and evolutionary tasks in a zero-shot setting.</li>
+                <li>Investigating structural and functional signals encoded in transformer attention matrices and contextual embedding representations of RNA sequences.</li>
+                <li>Developing a novel probing method that extracts task-relevant predictions solely from attention and embedding matrices — without fine-tuning or downstream task-specific heads.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="ttag">RNA Language Models</span>
+                <span class="ttag">Attention Probing</span>
+                <span class="ttag">Zero-shot Evaluation</span>
+                <span class="ttag">PyTorch</span>
+              </div>
+            </div>
+          </article>
 
-							<section id="second" class="main">
-								<header class="major">
-									<h2><strong>Research Interests</strong></h2>
-								</header>
-								<div class="content" style="text-align:left;">
-									<ul>
-										<li>
-											<strong>Bioinformatics:</strong>
-											<p>Computational cancer subtyping and multi-omics analysis, DNA/protein sequence analysis, and medical imaging applications</p>
-										</li>
-										<li>
-											<strong>Natural Language Processing:</strong>
-											<p>Data collection and preprocessing pipelines for sentiment and emotion analysis tasks, including cleaning, tokenization, normalization, stop-word removal, lemmatization/stemming, handling class imbalance, and converting text to numeric representations for model training.</p>
-										</li>
-										<li>
-											<strong>Large Language Models (LLMs):</strong>
-											<p>Fine-tuned and evaluated large language models for sentiment and emotion analysis tasks, including dataset preparation, tokenization, supervised fine-tuning, prompt engineering and model evaluation for downstream classification tasks.</p>
-										</li>
-									</ul>
-								</div>
-							</section>
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-meta">
+              <span class="timeline-date">Summer 2025</span>
+            </div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Research Intern</h3>
+              <p class="timeline-org">Iran Telecommunication Research Center (ITRC)</p>
+              <ul class="timeline-bullets">
+                <li>Investigated multilingual transformer models for Persian sentiment classification.</li>
+                <li>Fine-tuned XLM-RoBERTa on Persian Twitter datasets and evaluated performance across multiple metrics.</li>
+                <li>Conducted error analysis, model comparison, and documented results in a fully reproducible pipeline.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="ttag">XLM-RoBERTa</span>
+                <span class="ttag">Sentiment Analysis</span>
+                <span class="ttag">Multilingual NLP</span>
+              </div>
+            </div>
+          </article>
 
-						<!-- Research Experience -->
-						<section id="fourth" class="main">
-							<header class="major">
-								<h2><strong>Research Experience</strong></h2>
-							</header>
-							<div class="content" style="text-align:left;">
-								<div class="degree-row" style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;">
-									<h3 style="margin:0;">Research Intern, Iran Telecommunication Research Center (ITRC)</h3>
-									<span class="section-date">Summer 2025</span>
-								</div>
-								<ul>
-									<li>Investigated multilingual transformer models for Persian sentiment classification.</li>
-									<li>Fine-tuned XLM-RoBERTa on Persian Twitter datasets and evaluated performance.</li>
-									<li>Conducted error analysis, model comparison, and documented results in a reproducible pipeline.</li>
-								</ul>
-							</div>
-						</section>
+        </div>
+      </div>
+    </section>
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+    <!-- ─── PROJECTS ─────────────────────────────────────────── -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title" id="projects-title">Academic Projects</h2>
 
-					</div>
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <h3 class="project-name">scArches-Plus</h3>
+              <p class="project-subtitle">Transfer-Learning Framework with Correlation Penalty for Single-Cell Atlas Mapping</p>
+              <p class="project-context">Bioinformatics course project &nbsp;·&nbsp; Amirkabir University of Technology &nbsp;·&nbsp; 2025</p>
+            </div>
+            <div class="project-stack">
+              <span class="ttag">Python</span>
+              <span class="ttag">PyTorch</span>
+              <span class="ttag">Scanpy</span>
+              <span class="ttag">scRNA-seq</span>
+            </div>
+          </div>
+          <div class="project-metrics" aria-label="Key results">
+            <div class="metric">
+              <span class="metric-val">+8%</span>
+              <span class="metric-label">Clustering purity</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">−22%</span>
+              <span class="metric-label">Batch-effect correction<br><small>(Silhouette +0.11)</small></span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">−40%</span>
+              <span class="metric-label">Training time<br><small>no raw reference data needed</small></span>
+            </div>
+          </div>
+          <ul class="project-bullets">
+            <li>Re-implemented scArches with a Correlation Penalty regulariser — penalises spurious inter-latent correlations driven by batch.</li>
+            <li>Added ExtEncoder layer and redesigned the Decoder architecture to enforce batch-agnostic latent representations.</li>
+            <li>Enabled transfer-learning fine-tuning without requiring raw reference data, reducing compute and data-sharing friction.</li>
+          </ul>
+        </article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+      </div>
+    </section>
 
-			</div>
+    <!-- ─── INTERESTS ─────────────────────────────────────────── -->
+    <section id="interests" class="section section--alt" aria-labelledby="interests-title">
+      <div class="container">
+        <h2 class="section-title" id="interests-title">Research Interests</h2>
+        <div class="interests-grid">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true">
+              <i class="fas fa-dna"></i>
+            </div>
+            <h3 class="interest-name">Bioinformatics &amp;<br>Computational Biology</h3>
+            <p class="interest-desc">Single-cell and bulk RNA-seq analysis, gene regulatory network inference, multi-omics data integration, and ML-driven approaches to genomics and precision medicine.</p>
+          </article>
 
-	</body>
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3 class="interest-name">Deep Learning for<br>Biological Sequences</h3>
+            <p class="interest-desc">Applying transformer and foundation model architectures to DNA, RNA, and protein sequence analysis. Probing attention and embedding representations for structural and functional signals.</p>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <h3 class="interest-name">Natural Language<br>Processing</h3>
+            <p class="interest-desc">Fine-tuning and evaluating transformer-based models for sequence classification. Full pipeline from dataset preparation and tokenisation to supervised fine-tuning, prompt engineering, and evaluation.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ────────────────────────────────────────────── -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section-title" id="skills-title">Skills &amp; Languages</h2>
+        <div class="skills-groups">
+
+          <div class="skill-group">
+            <h4 class="skill-group-label">Programming</h4>
+            <div class="skill-tags">
+              <span class="tag tag--hi">Python</span>
+              <span class="tag">C</span>
+              <span class="tag">C++</span>
+              <span class="tag">Java</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4 class="skill-group-label">ML &amp; Data</h4>
+            <div class="skill-tags">
+              <span class="tag tag--hi">PyTorch</span>
+              <span class="tag tag--hi">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Matplotlib</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4 class="skill-group-label">Bioinformatics</h4>
+            <div class="skill-tags">
+              <span class="tag tag--hi">Scanpy</span>
+              <span class="tag tag--hi">AnnData</span>
+              <span class="tag tag--hi">scArches</span>
+              <span class="tag">scRNA-seq pipelines</span>
+              <span class="tag">RNA-seq analysis</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4 class="skill-group-label">Tools &amp; Platforms</h4>
+            <div class="skill-tags">
+              <span class="tag">Git &amp; GitHub</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Linux / Bash</span>
+              <span class="tag">LaTeX</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4 class="skill-group-label">Languages</h4>
+            <div class="skill-tags">
+              <span class="tag tag--hi">Persian (Native)</span>
+              <span class="tag tag--hi">English (Advanced)</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── COURSES ───────────────────────────────────────────── -->
+    <section id="courses" class="section section--alt" aria-labelledby="courses-title">
+      <div class="container">
+        <h2 class="section-title" id="courses-title">Related Courses &amp; Workshops</h2>
+        <div class="courses-list" role="list">
+
+          <div class="course-item" role="listitem">
+            <div class="course-main">
+              <span class="course-badge course-badge--active">In progress</span>
+              <h3 class="course-name">Advanced Bioinformatics</h3>
+              <p class="course-org">Sharif University of Technology (online)</p>
+            </div>
+          </div>
+
+          <div class="course-item" role="listitem">
+            <div class="course-main">
+              <span class="course-year">2026</span>
+              <h3 class="course-name">RNA-seq Data Analysis Workshop</h3>
+              <p class="course-org">Genome Guide (online)</p>
+            </div>
+          </div>
+
+          <div class="course-item" role="listitem">
+            <div class="course-main">
+              <span class="course-year">2024</span>
+              <h3 class="course-name">Fundamentals of Bioinformatics</h3>
+              <p class="course-org">Amirkabir University of Technology</p>
+            </div>
+          </div>
+
+          <div class="course-item" role="listitem">
+            <div class="course-main">
+              <span class="course-year">2023</span>
+              <h3 class="course-name">Introduction to NLP: Basic Concepts, Preprocessing and Representations</h3>
+              <p class="course-org">Amirkabir University of Technology</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TEACHING ──────────────────────────────────────────── -->
+    <section id="teaching" class="section" aria-labelledby="teaching-title">
+      <div class="container">
+        <h2 class="section-title" id="teaching-title">Teaching Experience</h2>
+
+        <article class="teaching-head">
+          <div class="teaching-head-meta">
+            <span class="teaching-badge">Head TA</span>
+            <span class="teaching-year">Fall 2025</span>
+          </div>
+          <h3 class="teaching-course">Microprocessors &amp; Assembly Language</h3>
+          <p class="teaching-org">Amirkabir University of Technology (Undergraduate)</p>
+          <ul class="timeline-bullets">
+            <li>Led and coordinated the TA team — assigned tasks, distributed responsibilities, and ensured consistent grading standards.</li>
+            <li>Planned assessments (assignments, quizzes, projects) and oversaw QA of questions, model answers, and rubrics.</li>
+            <li>Served as primary intermediary between students and the instructor, handling escalations and communicating course updates.</li>
+          </ul>
+        </article>
+
+        <div class="teaching-other">
+          <h4 class="teaching-other-label">Additional TA Appointments</h4>
+          <div class="teaching-other-list">
+            <div class="teaching-other-item">
+              <span class="teaching-other-course">Computer Networks</span>
+              <span class="teaching-other-term">Spring 2026</span>
+            </div>
+            <div class="teaching-other-item">
+              <span class="teaching-other-course">Software Test</span>
+              <span class="teaching-other-term">Spring 2026</span>
+            </div>
+            <div class="teaching-other-item">
+              <span class="teaching-other-course">Software Engineering 2</span>
+              <span class="teaching-other-term">Fall 2025</span>
+            </div>
+            <div class="teaching-other-item">
+              <span class="teaching-other-course">Advanced Programming</span>
+              <span class="teaching-other-term">Fall 2024, Fall 2025</span>
+            </div>
+            <div class="teaching-other-item">
+              <span class="teaching-other-course">Microprocessors &amp; Assembly Language</span>
+              <span class="teaching-other-term">Spring 2024</span>
+            </div>
+            <div class="teaching-other-item">
+              <span class="teaching-other-course">Differential Equations</span>
+              <span class="teaching-other-term">Spring 2023</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── EDUCATION & HONORS ───────────────────────────────── -->
+    <section id="education" class="section section--alt" aria-labelledby="edu-title">
+      <div class="container edu-grid">
+
+        <div class="edu-col">
+          <h2 class="section-title" id="edu-title">Education</h2>
+          <div class="edu-items">
+
+            <article class="edu-item">
+              <div class="edu-item-header">
+                <h3 class="edu-degree">B.Sc. in Computer Engineering</h3>
+                <span class="edu-year">2022 – present</span>
+              </div>
+              <p class="edu-inst">Amirkabir University of Technology (Tehran Polytechnic) &nbsp;·&nbsp; Iran</p>
+              <p class="edu-gpa">GPA (last three semesters): <strong>18.5 / 20</strong></p>
+            </article>
+
+            <article class="edu-item">
+              <div class="edu-item-header">
+                <h3 class="edu-degree">Farzanegan 2 High School</h3>
+                <span class="edu-year">2017 – 2022</span>
+              </div>
+              <p class="edu-inst">National Organisation for Development of Exceptional Talents of Iran</p>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="edu-col">
+          <h2 class="section-title">Honors &amp; Awards</h2>
+          <article class="honor-item">
+            <div class="honor-icon" aria-hidden="true"><i class="fas fa-award"></i></div>
+            <div>
+              <p class="honor-text">Ranked <strong>71st</strong> in the nationwide Iranian Universities Entrance Examination</p>
+              <p class="honor-sub">Among 145,000+ participants &nbsp;·&nbsp; 2022</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer id="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-dna-icon" aria-hidden="true"><i class="fas fa-dna"></i></span>
+        <div>
+          <p class="footer-name">Hasti KabirSamadi</p>
+          <p class="footer-tagline">Computational Biology &nbsp;·&nbsp; AUT &nbsp;·&nbsp; Tehran</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="mailto:hastikabirsamadi@aut.ac.ir" class="footer-link">
+          <i class="fas fa-envelope" aria-hidden="true"></i> Email
+        </a>
+        <a href="https://github.com/Hastikabirsamadi" class="footer-link" target="_blank" rel="noopener">
+          <i class="fab fa-github" aria-hidden="true"></i> GitHub
+        </a>
+        <a href="https://aut.ac.ir/" class="footer-link" target="_blank" rel="noopener">
+          <i class="fas fa-university" aria-hidden="true"></i> AUT
+        </a>
+        <a href="hasti-cv.pdf" class="footer-link" target="_blank" rel="noopener">
+          <i class="fas fa-file-pdf" aria-hidden="true"></i> CV
+        </a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 Hasti KabirSamadi</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
 </html>

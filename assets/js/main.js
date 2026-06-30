@@ -1,123 +1,138 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* ============================================================
+   HASTI KABIRSAMADI — Portfolio JS
+   ============================================================ */
 
-(function($) {
+(function () {
+  'use strict';
 
-	var	$window = $(window),
-		$body = $('body'),
-		$main = $('#main');
+  /* ── RNA SEQ BACKGROUND ─────────────────────────────────── */
+  function buildSeqBg() {
+    var el = document.querySelector('.hero-seq-bg');
+    if (!el) return;
+    var bases = 'AUGCAUGCAUGCAUGCAUGCUAGCUAGCUAGCUAGCGCAUGCUAGCAUGCUAGCGCUA';
+    var cols = Math.ceil(window.innerWidth / 9.6);
+    var rows = Math.ceil(window.innerHeight / 22);
+    var total = cols * rows;
+    var out = [];
+    for (var i = 0; i < total; i++) {
+      out.push(bases[Math.floor(Math.random() * bases.length)]);
+      if ((i + 1) % cols === 0) out.push('\n');
+    }
+    el.textContent = out.join('');
+  }
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
+  /* ── NAV HAMBURGER ──────────────────────────────────────── */
+  function initHamburger() {
+    var toggle = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
 
-	// Nav.
-		var $nav = $('#nav');
+    links.querySelectorAll('.nav-link').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
-		if ($nav.length > 0) {
+  /* ── NAV ACTIVE SECTION ─────────────────────────────────── */
+  function initNavActive() {
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    if (!sections.length) return;
 
-			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
+    var active = null;
+    function setActive(id) {
+      if (active === id) return;
+      active = id;
+      navLinks.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    }
 
-			// Links.
-				var $nav_a = $nav.find('a');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
-				$nav_a
-					.scrolly({
-						speed: 1000,
-						offset: function() { return $nav.height(); }
-					})
-					.on('click', function() {
+    sections.forEach(function (s) { observer.observe(s); });
+  }
 
-						var $this = $(this);
+  /* ── SCROLL REVEAL ──────────────────────────────────────── */
+  function initReveal() {
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
 
-						// External link? Bail.
-							if ($this.attr('href').charAt(0) != '#')
-								return;
+    if (prefersReduced) {
+      els.forEach(function (el) { el.classList.add('visible'); });
+      return;
+    }
 
-						// Deactivate all links.
-							$nav_a
-								.removeClass('active')
-								.removeClass('active-locked');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
 
-						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-							$this
-								.addClass('active')
-								.addClass('active-locked');
+    els.forEach(function (el) { observer.observe(el); });
+  }
 
-					})
-					.each(function() {
+  /* ── STAGGER DELAY ──────────────────────────────────────── */
+  function initStagger() {
+    document.querySelectorAll('[data-stagger]').forEach(function (parent) {
+      var delay = parseFloat(parent.dataset.stagger) || 0.08;
+      parent.querySelectorAll('.reveal').forEach(function (child, i) {
+        child.style.transitionDelay = (i * delay) + 's';
+      });
+    });
+  }
 
-						var	$this = $(this),
-							id = $this.attr('href'),
-							$section = $(id);
+  /* ── NAV BG ON SCROLL ───────────────────────────────────── */
+  function initNavShadow() {
+    var nav = document.getElementById('navbar');
+    if (!nav) return;
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+  }
 
-						// No section for this link? Bail.
-							if ($section.length < 1)
-								return;
+  /* ── SMOOTH SCROLL WITH NAV OFFSET ─────────────────────── */
+  function initSmoothScroll() {
+    var navH = 64;
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        var target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      });
+    });
+  }
 
-						// Scrollex.
-							$section.scrollex({
-								mode: 'middle',
-								initialize: function() {
+  /* ── INIT ───────────────────────────────────────────────── */
+  function init() {
+    buildSeqBg();
+    initHamburger();
+    initNavActive();
+    initReveal();
+    initStagger();
+    initNavShadow();
+    initSmoothScroll();
+  }
 
-									// Deactivate section.
-										if (browser.canUse('transition'))
-											$section.addClass('inactive');
-
-								},
-								enter: function() {
-
-									// Activate section.
-										$section.removeClass('inactive');
-
-									// No locked links? Deactivate all links and activate this section's one.
-										if ($nav_a.filter('.active-locked').length == 0) {
-
-											$nav_a.removeClass('active');
-											$this.addClass('active');
-
-										}
-
-									// Otherwise, if this section's link is the one that's locked, unlock it.
-										else if ($this.hasClass('active-locked'))
-											$this.removeClass('active-locked');
-
-								}
-							});
-
-					});
-
-		}
-
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000
-		});
-
-})(jQuery);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
